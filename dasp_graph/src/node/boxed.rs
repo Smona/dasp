@@ -53,7 +53,7 @@ where
     T: 'static + Node,
 {
     fn from(n: Box<T>) -> Self {
-        BoxedNode(n)
+        BoxedNode(n as Box<T>)
     }
 }
 
