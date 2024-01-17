@@ -92,7 +92,7 @@ impl Deref for BoxedNodeSend {
     }
 }
 
-impl<N: Node + Sized> DerefMut for BoxedNode<N> {
+impl<N: Node> DerefMut for BoxedNode<N> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
     }
